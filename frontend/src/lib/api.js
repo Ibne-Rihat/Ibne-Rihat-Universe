@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // Hardcoding the local address bypasses the environment variable lookup and prevents global script hijacking
-export const API = "http://localhost:8000/api";
+export const API = "http://usa-node.bitaserver.com.bd:1244/api";
 
 const api = axios.create({
   baseURL: API,
