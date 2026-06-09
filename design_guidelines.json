@@ -1,0 +1,94 @@
+{
+  "theme": "DARK",
+  "archetype": "5 (Luxury) + Technical Precision",
+  "mood": "Cinematic, Executive Workspace, Highly Functional, Command-Center",
+  "colors": {
+    "background": "#050505",
+    "surface": "bg-white/5",
+    "primary_accent": "#a3e635",
+    "secondary_accent": "#2dd4bf",
+    "text_primary": "#FFFFFF",
+    "text_secondary": "#A1A1AA",
+    "border": "border-white/10",
+    "glow": "rgba(163, 230, 53, 0.15)"
+  },
+  "typography": {
+    "heading_font": "Outfit",
+    "body_font": "Inter",
+    "mono_font": "JetBrains Mono",
+    "hierarchy": {
+      "h1": "text-4xl tracking-tighter font-semibold text-white",
+      "h2": "text-2xl tracking-tight font-medium text-white",
+      "h3": "text-xl font-medium text-zinc-200",
+      "body": "text-sm text-zinc-400 leading-relaxed",
+      "labels": "text-xs uppercase tracking-[0.2em] text-zinc-500",
+      "metrics": "text-3xl font-light tracking-tighter text-white font-mono"
+    }
+  },
+  "surfaces_and_materials": {
+    "glassmorphism": "backdrop-blur-2xl bg-white/5 border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.5)]",
+    "cards": "bg-zinc-900/40 border border-white/5 rounded-2xl hover:bg-zinc-900/60 transition-colors",
+    "sidebar": "bg-black/80 backdrop-blur-3xl border-r border-white/5",
+    "command_bar": "bg-zinc-900/90 backdrop-blur-xl border border-white/10 shadow-2xl rounded-xl"
+  },
+  "layout_and_spacing": {
+    "dashboard_grid": "grid grid-cols-1 md:grid-cols-8 lg:grid-cols-12 gap-6",
+    "spacing_scale": "p-6 to p-8 for main cards, p-4 for list items",
+    "alignment": "Left-aligned for all data, optical alignment for icons"
+  },
+  "components_strategy": {
+    "buttons": "h-9 px-4 rounded-lg text-sm font-medium border border-white/10 bg-white/5 hover:bg-white/10 hover:text-lime-400 transition-all",
+    "primary_buttons": "h-9 px-4 rounded-lg text-sm font-medium bg-lime-400 text-black hover:bg-lime-500 shadow-[0_0_15px_rgba(163,230,53,0.3)] transition-all",
+    "inputs": "bg-black/50 border border-white/10 focus:ring-1 focus:ring-lime-400/50 rounded-lg text-white placeholder:text-zinc-600",
+    "charts": "Recharts with transparent backgrounds, lime green stroke for primary lines, minimal grid lines (stroke-white/5)",
+    "kanban": "Subtle column borders (border-white/5), draggable cards with crystal glass effect on drag",
+    "widgets": "Cardless or minimal border cards, large typography for numbers, clean F-pattern reading flow"
+  },
+  "motion_and_effects": {
+    "background_animation": "Subtle moving gradient mesh using CSS or TSParticles for floating ambient dust",
+    "hover": "Slight lift (-translate-y-0.5) and border glow (border-lime-500/30)",
+    "transitions": "all 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
+    "accessibility": "respect prefers-reduced-motion"
+  },
+  "image_urls": {
+    "backgrounds": [
+      {
+        "url": "https://images.unsplash.com/photo-1517241034903-9a4c3ab12f00?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGRhcmslMjBnZW9tZXRyaWMlMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc4MDk4NTM5OHww&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract dark geometric background",
+        "category": "hero_background"
+      },
+      {
+        "url": "https://images.pexels.com/photos/13129482/pexels-photo-13129482.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Monochrome geometric 3D effect",
+        "category": "texture_overlay"
+      }
+    ],
+    "avatars": [
+      {
+        "url": "https://images.unsplash.com/photo-1767175620484-1ed37931a0d1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzc21hbiUyMHBvcnRyYWl0JTIwZGFyayUyMGJhY2tncm91bmR8ZW58MHx8fHwxNzgwOTg1Mzk5fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Ibne Rihat Avatar (Professional Businessman Dark Background)",
+        "category": "user_avatar"
+      }
+    ],
+    "decorations": [
+      {
+        "url": "https://images.unsplash.com/photo-1444006978051-63ee08fa6291?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwyfHxuZW9uJTIwZ3JlZW4lMjBnbG93aW5nJTIwbGlnaHRzJTIwYWJzdHJhY3R8ZW58MHx8fHwxNzgwOTg1Mzk5fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Neon green accent blur",
+        "category": "ambient_glow"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Strictly follow the 'DARK' theme. Do not build light mode alternatives.",
+    "Use Phosphor Icons or Lucide React for consistent, technical thin-line icons.",
+    "Data density is key: Use a multi-column Bento grid for the dashboard (e.g. 12-column CSS Grid).",
+    "For the background, implement a dark matte color (#050505) and layer subtle neon green radial gradients with CSS blur (blur-3xl) to mimic JARVIS/ambient neon lighting.",
+    "Install and use 'Outfit' font for headers and 'JetBrains Mono' for data points/metrics.",
+    "All interactive elements MUST use data-testid attributes for testing (e.g., data-testid='revenue-widget').",
+    "Apply Shadcn UI components but heavily strip their default styles to match the 'Linear/Raycast' bare-metal aesthetic (remove strong borders, use bg-white/5, make it look custom).",
+    "Ensure 'Focus Mode' (Pomodoro) takes over the screen using a Glassmorphism modal overlay with cinematic typography.",
+    "For the Analytics Center and Money Center, use Recharts with dark-mode specific styling (transparent background, neon strokes, hidden axis lines).",
+    "Never use placeholder image domains (like via.placeholder.com). Strictly use the image URLs provided in this JSON.",
+    "Ensure all text meets minimum WCAG AA contrast (4.5:1 for body). Text on glassmorphism panels must remain legible."
+  ]
+}
