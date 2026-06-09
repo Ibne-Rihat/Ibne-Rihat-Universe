@@ -602,7 +602,7 @@ async def weather(lat: float = Query(23.81), lon: float = Query(90.41)):
             )
         data = r.json().get("current", {})
         codes = {0: "Clear", 1: "Mainly Clear", 2: "Partly Cloudy", 3: "Overcast", 45: "Foggy", 48: "Foggy",
-                 51: "Drizzle", 61: "Rain", 63: "Rain", 65: "Heavy Rain", 71: "Snow", 80: "Showers", 95: "Storm"}
+        51: "Drizzle", 61: "Rain", 63: "Rain", 65: "Heavy Rain", 71: "Snow", 80: "Showers", 95: "Storm"}
         return {
             "temperature": data.get("temperature_2m"),
             "humidity": data.get("relative_humidity_2m"),
@@ -724,4 +724,4 @@ app.add_middleware(
 allow_origins=os.environ.get('CORS_ORIGINS', '*').split(','),
     allow_methods=["*"],
     allow_headers=["*"],
-)
+    )
