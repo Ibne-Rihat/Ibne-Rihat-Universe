@@ -52,6 +52,13 @@ __pycache__/
 venv/
 .venv/
 *.pyc
+node_modules/
+.env
+.env.*
+__pycache__/
+frontend/node_modules/
+backend/__pycache__/
+.vercel
 
 # Development tools
 chainlit.md

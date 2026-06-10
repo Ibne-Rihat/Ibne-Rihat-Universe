@@ -21,8 +21,10 @@ from pydantic import BaseModel, EmailStr, Field
 # ---------------------------------------------------------------------------
 # Database
 # ---------------------------------------------------------------------------
-mongo_url = "mongodb+srv://mrrihadr_db_user:ljQTeSc8UisTLMUr@cluster0.6eadmxg.mongodb.net/?appName=Cluster0"
-client = AsyncIOMotorClient(mongo_url)
+mongo_url = os.getenv("mongodb+srv://mrrihadr_db_user:ljQTeSc8UisTLMUr@cluster0.6eadmxg.mongodb.net/?appName=Cluster0")
+
+if not mongo_url:
+    raise Exception("MONGO_URL environment variable missing")
 db = client["ai_assistant_db"]
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -721,7 +723,10 @@ app.include_router(api)
 app.add_middleware(
     CORSMiddleware,
     allow_credentials=True,
-allow_origins=os.environ.get('CORS_ORIGINS', '*').split(','),
+    allow_origins=os.getenv(
+        "CORS_ORIGINS",
+        "https://ibne-rihat-universe.vercel.app"
+    ).split(","),
     allow_methods=["*"],
     allow_headers=["*"],
-    )
+)
